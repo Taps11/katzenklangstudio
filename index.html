@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KatzenKlangStudio - Dein Blog für Kreativität und Katzenliebe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-background: #1a1a1a;
+            --lilac-accent: #b0a7c4;
+            --gold-accent: #e6b800;
+            --text-color: #f0f0f0;
+            --light-lilac: #d0c9e0;
+            --light-gold: #f5d76e;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark-background);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #2a2a2a;
+            border-bottom: 2px solid var(--lilac-accent);
+        }
+
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            color: var(--gold-accent);
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--lilac-accent);
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        .blog-post-card {
+            background-color: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+            border: 1px solid var(--lilac-accent);
+        }
+
+        .blog-post-card:nth-child(1) { border-color: var(--gold-accent); }
+        .blog-post-card:nth-child(2) { border-color: var(--gold-accent); } /* BKH Katze */
+        .blog-post-card:nth-child(3) { border-color: var(--gold-accent); }
+
+        .blog-post-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .blog-post-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .post-content {
+            padding: 25px;
+        }
+
+        .post-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            color: var(--gold-accent);
+            margin-top: 0;
+        }
+        .blog-post-card:nth-child(1) .post-content h2 { color: var(--lilac-accent); }
+        .blog-post-card:nth-child(2) .post-content h2 { color: var(--lilac-accent); }
+        .blog-post-card:nth-child(3) .post-content h2 { color: var(--lilac-accent); }
+
+
+        .post-content p {
+            font-size: 0.95em;
+            color: var(--text-color);
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            display: inline-block;
+            background-color: var(--gold-accent);
+            color: var(--dark-background);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .blog-post-card:nth-child(3) .read-more { background-color: var(--gold-accent); }
+
+        .read-more:hover {
+            background-color: var(--light-lilac);
+        }
+        .blog-post-card:nth-child(3) .read-more:hover { background-color: var(--light-gold); }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            background-color: #2a2a2a;
+            border-top: 2px solid var(--gold-accent);
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5em;
+            }
+            .blog-posts {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo2.png" alt="KatzenKlangStudio Logo"> <h1>KatzenKlangStudio</h1>
+            <p class="subtitle">Wo Kreativität und Katzenliebe sich treffen.</p>
+        </header>
+
+        <main class="blog-posts">
+            <article class="blog-post-card">
+                <img src="fotografie.jpg" alt="Vintage Kamera und Fotos"> <div class="post-content">
+                    <h2>Die Magie der Fotografie</h2>
+                    <p>Entdecke, wie du mit deiner Kamera einzigartige Perspektiven einfängst und die Schönheit der Welt (und deiner Katzen!) in Bildern festhältst. Von Belichtung bis Bildkomposition – tauche ein in die Kunst des Sehens...</p>
+                    <a href="fotografie-blogbeitrag.html" class="read-more">Weiterlesen</a>
+                </div>
+            </article>
+
+            <article class="blog-post-card">
+                <img src="bkh3.png" alt="BKH Katze in Lilac"> <div class="post-content">
+                    <h2>Britische Eleganz auf vier Pfoten</h2>
+                    <p>Die Britisch Kurzhaar, bekannt für ihr plüschiges Fell und ihren sanften Charakter, ist eine der beliebtesten Katzenrassen. Erfahre alles über ihre Besonderheiten, Pflege und warum sie perfekte Begleiter sind...</p>
+                    <a href="bkh-katze-blogbeitrag.html" class="read-more">Weiterlesen</a>
+                </div>
+            </article>
+
+            <article class="blog-post-card">
+                <img src="musik.png" alt="Musikproduktions-Setup"> <div class="post-content">
+                    <h2>Vom Rauschen zum Hit: Dein Weg zur Musik</h2>
+                    <p>Träumst du davon, deine eigenen Tracks zu produzieren? Dieser Guide führt dich durch die Grundlagen der Musikproduktion – von der ersten Idee über die Software bis zum fertigen Mix. </p>
+                    <a href="musikproduktion-blogbeitrag.html" class="read-more">Weiterlesen</a>
+                </div>
+            </article>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 KatzenKlangStudio. Alle Rechte vorbehalten.</p>
+        </footer>
+    </div>
+</body>
+</html>
