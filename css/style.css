@@ -57,9 +57,30 @@ html, body {
   body { font-family: var(--ui-font); }
   h1,h2,h3,.headline { font-family: var(--display-font); }
 
-  .playfair-display {
-    font-family: "Playfair Display", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 100 900;
-    font-style: normal;
+  :root{
+    --heading-lilac: #e7dff3; /* leichter, besser lesbar */
+    --body-text: #dcd8db;
+    --card-bg: #2b2b2b; /* falls du Kartentöne hast */
+  }
+  
+  html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  /* Headline styling — erzwinge 700 für Playfair */
+  h1,h2,h3,.headline {
+    font-family: "Playfair Display", serif;
+    color: var(--heading-lilac);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  
+  /* Body / Teaser text */
+  body, p, li {
+    font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--body-text);
+    line-height: 1.6;
   }
