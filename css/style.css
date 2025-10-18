@@ -1,34 +1,34 @@
-/* ---------- Montserrat (lokal, statisch/woff2 fallback) ---------- */
+/* ---------- Montserrat (lokal) - Pfad korrekt relativ zur css/style.css ---------- */
 @font-face {
   font-family: "Montserrat";
-  src: url("fonts/montserrat/montserrat-variablefont_wght-webfont.woff2") format("woff2"),
-       url("fonts/montserrat/montserrat-variablefont_wght-webfont.woff") format("woff");
+  src: url("../fonts/montserrat/montserrat-variablefont_wght-webfont.woff2") format("woff2"),
+       url("../fonts/montserrat/montserrat-variablefont_wght-webfont.woff") format("woff");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Montserrat";
-  src: url("fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2"),
-       url("fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff") format("woff");
+  src: url("../fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2"),
+       url("../fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff") format("woff");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 
-/* ---------- Playfair Display (lokal) ---------- */
+/* ---------- Playfair Display (lokal) - Pfad relativ zur css/style.css ---------- */
 @font-face {
   font-family: "Playfair Display";
-  src: url("fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"),
-       url("fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff") format("woff");
+  src: url("../fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2"),
+       url("../fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff") format("woff");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Playfair Display";
-  src: url("fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff2") format("woff2"),
-       url("fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff") format("woff");
+  src: url("../fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff2") format("woff2"),
+       url("../fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff") format("woff");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
