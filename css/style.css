@@ -47,3 +47,10 @@ html, body {
   }
   body { font-family: var(--ui-font); }
   h1,h2,h3,.headline { font-family: var(--display-font); }
+
+  .playfair-display {
+    font-family: "Playfair Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100 900;
+    font-style: normal;
+  }
