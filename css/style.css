@@ -1,156 +1,43 @@
-/* ------------------------------------------------------------------
-   KatzenKlangStudio - zentrale Styles + lokale Fonts (variable)
-   - Paste this whole file (or put at top of your existing style.css)
-   - Ensure the font files exist at the exact paths used below
-   ------------------------------------------------------------------ */
-
-/* ---------------------- Variable font faces ----------------------- */
-/* Playfair Display (variable) */
+/* ---------- Montserrat (variable) ---------- */
 @font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2");
+  font-family: "MontserratVF";
+  src: url("fonts/montserrat/montserrat-variablefont_wght-webfont.woff2") format("woff2-variations"),
+       url("fonts/montserrat/montserrat-variablefont_wght-webfont.woff") format("woff-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff2") format("woff2");
+  font-family: "MontserratVF";
+  src: url("fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2-variations"),
+       url("fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff") format("woff-variations");
   font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
 
-/* Montserrat (variable) */
+/* ---------- Playfair Display (variable) ---------- */
 @font-face {
-  font-family: "Montserrat";
-  src: url("../fonts/montserrat/montserrat-variablefont_wght-webfont.woff2") format("woff2");
+  font-family: "PlayfairVF";
+  src: url("fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2-variations"),
+       url("fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff") format("woff-variations");
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "PlayfairVF";
+  src: url("fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff2") format("woff2-variations"),
+       url("fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff") format("woff-variations");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
 
-/* ----------------------- Color & UI variables --------------------- */
+/* Fallback stacks */
 :root{
-  --heading-lilac: #e7dff3;   /* Überschriften (hell/lilac) */
-  --body-text:      #d7d3d7;  /* Fließtext */
-  --muted-text:     #bdb8bd;  /* meta / teaser text */
-  --card-bg:        #2b2b2b;  /* Karten-Hintergrund */
-  --page-bg:        #1a1a1a;  /* Seiten-Hintergrund (falls benötigt) */
-  --button-bg:      #f0d54a;  /* Buttons (Gold) */
-  --button-fg:      #1f1f1f;  /* Button-Text */
+  --ui-font: "MontserratVF", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --display-font: "PlayfairVF", "Playfair Display", Georgia, "Times New Roman", Times, serif;
 }
-
-/* ---------------------- Rendering improvements -------------------- */
-html, body {
-  -webkit-font-smoothing: antialiased;   /* mac / WebKit */
-  -moz-osx-font-smoothing: grayscale;    /* Firefox mac */
-  text-rendering: optimizeLegibility;
-  background: var(--page-bg);
-  margin: 0;
-  padding: 0;
-}
-
-/* ------------------------- Fallback stacks ------------------------ */
-:root{
-  --ui-font: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --display-font: "Playfair Display", Georgia, "Times New Roman", Times, serif;
-}
-
-/* ------------------------- Body / Text --------------------------- */
-body, p, li, a, input, textarea {
-  font-family: var(--ui-font);
-  color: var(--body-text);
-  font-weight: 400;
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-/* small helper for muted text */
-.muted, .meta, .teaser {
-  color: var(--muted-text);
-}
-
-/* ------------------------ Headlines / Display -------------------- */
-/* Headlines use Playfair (variable). We request the weight explicitly. */
-h1, h2, h3, .headline {
-  font-family: var(--display-font);
-  /* request weight via font-weight AND variable axis to be explicit */
-  font-weight: 700;
-  font-variation-settings: "wght" 700;
-  color: var(--heading-lilac);
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-  margin-top: 0;
-  margin-bottom: 0.6em;
-}
-
-/* smaller heading variants */
-h2 { font-size: 2rem; }
-h3 { font-size: 1.5rem; }
-
-/* --------------------------- Buttons ----------------------------- */
-button, .btn, .read-more {
-  font-family: var(--ui-font) !important;
-  font-weight: 700 !important;
-  font-variation-settings: "wght" 700;
-  background: var(--button-bg);
-  color: var(--button-fg);
-  padding: 0.7rem 1.1rem;
-  border-radius: 8px;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  text-decoration: none;
-  box-shadow: none;
-}
-
-/* CTA style for card buttons */
-.blog-post-card .read-more, .blog-post-card button {
-  display: inline-block;
-  margin-top: 1.15rem;
-}
-
-/* --------------------------- Cards ------------------------------- */
-.blog-post-card, .card {
-  background: var(--card-bg);
-  color: var(--body-text);
-  border-radius: 10px;
-  padding: 0;
-  overflow: hidden;
-}
-
-/* card inner content - spacing */
-.blog-post-card .post-content {
-  padding: 1.6rem;
-}
-
-/* Headline inside card */
-.blog-post-card h2 {
-  margin: 0 0 1rem 0;
-}
-
-/* ------------------------ Utility tweaks ------------------------- */
-/* ensure links are legible */
-a { color: var(--heading-lilac); text-decoration: none; }
-a:hover { text-decoration: underline; }
-
-/* small responsive niceties */
-@media (max-width: 768px) {
-  h2 { font-size: 1.4rem; }
-  .blog-post-card { margin-bottom: 1rem; }
-}
-
-/* =================================================================
-   Notes:
-   - If you used explicit preload links in index.html, make sure they
-     point to the same filenames as above (playfair-variable...woff2).
-   - After you paste this file: Commit & Push, then open the site and
-     do a hard reload (Cmd+Shift+R). Check DevTools → Console:
-       document.fonts.check('1em "Playfair Display"')
-       document.fonts.check('700 1em "Playfair Display"')
-       document.fonts.check('700 1em "Montserrat"')
-   - If any of those return false, open DevTools → Network → filter "font"
-     and copy the requested font URL (right-click → Copy link). Paste it here
-     and I will give you the exact @font-face line for that filename.
-   ================================================================= */
+body { font-family: var(--ui-font); }
+h1,h2,h3,.headline { font-family: var(--display-font); }
