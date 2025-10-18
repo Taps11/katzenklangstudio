@@ -1,33 +1,22 @@
 /* Playfair Display — klare Zuordnung von Regular / Italic / Bold / Black */
+/* --- Playfair variable: deckt 100..900 ab (Regular + Bold) --- */
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/playfair/playfairdisplay-regular-webfont.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2");
+  font-weight: 100 900;   /* variable font: alle Gewichte abgedeckt */
   font-style: normal;
   font-display: swap;
 }
+
+/* optional: italic variable (falls vorhanden) */
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/playfair/playfairdisplay-italic-webfont.woff2") format("woff2");
-  font-weight: 400;
+  src: url("../fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff2") format("woff2");
+  font-weight: 100 900;
   font-style: italic;
   font-display: swap;
 }
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/playfair/playfairdisplay-bold-webfont.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-/* Falls du sehr fette Headlines willst, benutze Black für 900 */
-@font-face {
-  font-family: "Playfair Display";
-  src: url("../fonts/playfair/playfairdisplay-black-webfont.woff2") format("woff2");
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 /* Montserrat (Variable oder statisch) - sicherstellen, dass 700 verfügbar ist */
 @font-face {
