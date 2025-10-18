@@ -1,0 +1,43 @@
+/* ---------- Montserrat (variable) ---------- */
+@font-face {
+    font-family: "MontserratVF";
+    src: url("/fonts/montserrat/montserrat-variablefont_wght-webfont.woff2") format("woff2-variations"),
+         url("/fonts/montserrat/montserrat-variablefont_wght-webfont.woff") format("woff-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "MontserratVF";
+    src: url("/fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff2") format("woff2-variations"),
+         url("/fonts/montserrat/montserrat-italic-variablefont_wght-webfont.woff") format("woff-variations");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* ---------- Playfair Display (variable) ---------- */
+  @font-face {
+    font-family: "PlayfairVF";
+    src: url("/fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff2") format("woff2-variations"),
+         url("/fonts/playfair/playfairdisplay-variablefont_wght-webfont.woff") format("woff-variations");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "PlayfairVF";
+    src: url("/fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff2") format("woff2-variations"),
+         url("/fonts/playfair/playfairdisplay-italic-variablefont_wght-webfont.woff") format("woff-variations");
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+  }
+  
+  /* Fallback stacks */
+  :root{
+    --ui-font: "MontserratVF", "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --display-font: "PlayfairVF", "Playfair Display", Georgia, "Times New Roman", Times, serif;
+  }
+  body { font-family: var(--ui-font); }
+  h1,h2,h3,.headline { font-family: var(--display-font); }
